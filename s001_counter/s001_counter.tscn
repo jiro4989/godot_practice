@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://s001_counter/s001_counter.gd" type="Script" id=1]
+[ext_resource path="res://s001_counter/CounterLabel.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 253.0
+margin_top = 143.0
+margin_right = 465.0
+margin_bottom = 229.0
+text = "Increment"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 289.0
+margin_top = 274.0
+margin_right = 431.0
+margin_bottom = 325.0
+text = "0"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
