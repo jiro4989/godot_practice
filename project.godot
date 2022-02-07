@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="godot_practice"
-run/main_scene="res://s001_counter/s001_counter.tscn"
+run/main_scene="res://Top.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://s002_keyinput/Icon.gd" type="Script" id=2]
+[ext_resource path="res://s002_keyinput/BackToTop.gd" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,3 +21,16 @@ text = "Push cursor key up or right or down or left."
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BackToTop" type="Button" parent="."]
+margin_left = 241.0
+margin_top = 432.0
+margin_right = 398.0
+margin_bottom = 494.0
+text = "Back to Top"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BackToTop" to="BackToTop" method="_on_BackToTop_pressed"]
