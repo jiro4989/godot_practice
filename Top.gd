@@ -16,3 +16,6 @@ func _on_Button002_pressed():
 
 func _on_Button003_pressed():
 	get_tree().change_scene("res://s003_move_camera/Scene.tscn")
+
+func _on_Button004_pressed():
+	get_tree().change_scene("res://s004_change_ui_text/scene.tscn")

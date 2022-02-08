@@ -45,6 +45,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button004" type="Button" parent="Control"]
+margin_left = 422.0
+margin_top = 69.0
+margin_right = 505.0
+margin_bottom = 152.0
+rect_pivot_offset = Vector2( 101, 107 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Control/Button001" to="." method="_on_Button001_pressed"]
 [connection signal="pressed" from="Control/Button002" to="." method="_on_Button002_pressed"]
 [connection signal="pressed" from="Control/Button003" to="." method="_on_Button003_pressed"]
+[connection signal="pressed" from="Control/Button004" to="." method="_on_Button004_pressed"]
