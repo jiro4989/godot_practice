@@ -13,3 +13,6 @@ func _on_Button001_pressed():
 
 func _on_Button002_pressed():
 	get_tree().change_scene("res://s002_keyinput/Scene.tscn")
+
+func _on_Button003_pressed():
+	get_tree().change_scene("res://s003_move_camera/Scene.tscn")

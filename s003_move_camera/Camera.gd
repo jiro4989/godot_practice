@@ -7,3 +7,7 @@ func _ready():
 
 func _process(delta):
 	offset = get_viewport().get_mouse_position()
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Top.tscn")

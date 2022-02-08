@@ -13,3 +13,15 @@ texture = ExtResource( 2 )
 position = Vector2( 365, 246 )
 current = true
 script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 246.0
+margin_top = 217.0
+margin_right = 536.0
+margin_bottom = 362.0
+text = "back to top"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Camera2D" method="_on_Button_pressed"]
