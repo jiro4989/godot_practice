@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://s003_move_camera/Camera.gd" type="Script" id=1]
+[ext_resource path="res://s003_move_camera/bg.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 432, 267 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 365, 246 )
+current = true
+script = ExtResource( 1 )
