@@ -14,7 +14,7 @@ __meta__ = {
 [node name="Button001" parent="Control" instance=ExtResource( 2 )]
 position = Vector2( 30, 36 )
 label = "1"
-scene_path = "res://s001_counter/s001_counter.tscn"
+scene_path = "res://src/s001_counter/scene.tscn"
 
 [node name="Button002" parent="Control" instance=ExtResource( 2 )]
 position = Vector2( 97, 36 )

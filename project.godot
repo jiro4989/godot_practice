@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Global_s001="*res://s001_counter/Global.gd"
+Global_s001="*res://src/s001_counter/Global.gd"
 
 [physics]
 

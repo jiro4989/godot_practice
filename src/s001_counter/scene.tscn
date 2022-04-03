@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/s000_top/top_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/s001_counter/game.gd" type="Script" id=2]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 253.0
+margin_top = 143.0
+margin_right = 465.0
+margin_bottom = 229.0
+text = "Increment"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 289.0
+margin_top = 274.0
+margin_right = 431.0
+margin_bottom = 325.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopButton" parent="." instance=ExtResource( 1 )]
+position = Vector2( 343, 323 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
