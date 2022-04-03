@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Top.gd" type="Script" id=1]
+[ext_resource path="res://src/s000_top/button.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -12,51 +11,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button001" type="Button" parent="Control"]
-margin_left = 82.0
-margin_top = 69.0
-margin_right = 165.0
-margin_bottom = 152.0
-rect_pivot_offset = Vector2( 101, 107 )
-text = "1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button001" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 30, 36 )
+label = "1"
+scene_path = "res://s001_counter/s001_counter.tscn"
 
-[node name="Button002" type="Button" parent="Control"]
-margin_left = 198.0
-margin_top = 69.0
-margin_right = 281.0
-margin_bottom = 152.0
-rect_pivot_offset = Vector2( 101, 107 )
-text = "2"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button002" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 97, 36 )
+label = "2"
+scene_path = "res://s002_keyinput/Scene.tscn"
 
-[node name="Button003" type="Button" parent="Control"]
-margin_left = 315.0
-margin_top = 69.0
-margin_right = 398.0
-margin_bottom = 152.0
-rect_pivot_offset = Vector2( 101, 107 )
-text = "3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button003" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 163, 36 )
+label = "3"
+scene_path = "res://s003_move_camera/Scene.tscn"
 
-[node name="Button004" type="Button" parent="Control"]
-margin_left = 422.0
-margin_top = 69.0
-margin_right = 505.0
-margin_bottom = 152.0
-rect_pivot_offset = Vector2( 101, 107 )
-text = "4"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="pressed" from="Control/Button001" to="." method="_on_Button001_pressed"]
-[connection signal="pressed" from="Control/Button002" to="." method="_on_Button002_pressed"]
-[connection signal="pressed" from="Control/Button003" to="." method="_on_Button003_pressed"]
-[connection signal="pressed" from="Control/Button004" to="." method="_on_Button004_pressed"]
+[node name="Button004" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 228, 36 )
+label = "4"
+scene_path = "res://s004_change_ui_text/scene.tscn"

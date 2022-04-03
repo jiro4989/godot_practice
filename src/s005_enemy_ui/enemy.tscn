@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/s005_enemy_ui/enemy.gd" type="Script" id=2]
+
+[node name="object" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="name_label" type="Label" parent="."]
+margin_left = -19.0
+margin_top = -47.0
+margin_right = 21.0
+margin_bottom = -33.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hp_label" type="Label" parent="."]
+margin_left = -19.0
+margin_top = 32.0
+margin_right = 21.0
+margin_bottom = 46.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

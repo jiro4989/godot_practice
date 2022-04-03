@@ -2,7 +2,7 @@
 
 [ext_resource path="res://s001_counter/s001_counter.gd" type="Script" id=1]
 [ext_resource path="res://s001_counter/CounterLabel.gd" type="Script" id=2]
-[ext_resource path="res://s001_counter/BackToTop.gd" type="Script" id=3]
+[ext_resource path="res://src/s000_top/top_button.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,16 +28,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackToTop" type="Button" parent="."]
-margin_left = 323.0
-margin_top = 405.0
-margin_right = 466.0
-margin_bottom = 474.0
-text = "Back to Top"
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 343, 323 )
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
-[connection signal="pressed" from="BackToTop" to="BackToTop" method="_on_BackToTop_pressed"]
