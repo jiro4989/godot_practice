@@ -13,23 +13,20 @@ OSSのゲームエンジン https://godotengine.org[Godot] の練習用のリポ
 Top.tscnがすべての起点になるシーンで、そこから個別のシーンに遷移できる。
 個別のシーンからトップのシーンに戻れる。
 
-例えば `s001_counter` のシーン内で参照されるファイルはすべてこのディレクトリ内で完結する。
-
 .ディレクトリの説明
 |===========
 | ディレクトリ名 | 説明
 
-| s001_counter | ボタンを押すと変数を1インクリメントして画面に変数を表示する
-| s002_keyinput | キーボード操作でSpriteを移動する
-| s003_move_camera | マウスカーソルの位置にカメラが追従する
-| s004_change_ui_text | ボタンを押すとUI上のテキストを次に進める
-| s005_enemy_ui | 敵に名前と体力を設定して、敵ごとに個別の体力を持たせる
+| src/s000_top | トップ画面で使っているボタンのシーンを配置している。また、各シーンからトップ画面に戻るための共通シーンを配置している
+| src/s001_counter | ボタンを押すと変数を1インクリメントして画面に変数を表示する
+| src/s002_keyinput | キーボード操作でSpriteを移動する
+| src/s003_move_camera | マウスカーソルの位置にカメラが追従する
+| src/s004_change_ui_text | ボタンを押すとUI上のテキストを次に進める
+| src/s005_enemy_ui | 敵に名前と体力を設定して、敵ごとに個別の体力を持たせる
 |===========
 
 == 命名規則
 
-snake_case のみ。UpperCamelCaseとか使ってるのは命名規則を設けていなかったときの名残。今後は snake_case で統一する。
-
-== src とそれ以外について
-
-ディレクトリがどんどん増えてきたので途中から `src` ディレクトリ配下にまとめるようにした。 `s004_change_ui_text` までリポジトリ直下に配置されてるのはその名残。どこかのタイミングで `src` ディレクトリ配下に移動する。
+tscn内のNode名はUpperCamelCase。
+ファイル名は snake_case にする。
+これは https://docs.godotengine.org/ja/stable/tutorials/scripting/gdscript/gdscript_styleguide.html[Godotのベストプラクティス] に従っている。
