@@ -21,7 +21,3 @@ func _process(delta):
 func _on_next_button_pressed():
 	if text_index < texts.size() - 1:
 		text_index += 1
-
-
-func _on_back_to_top_pressed():
-	get_tree().change_scene("res://Top.tscn")
