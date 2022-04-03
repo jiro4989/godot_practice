@@ -24,7 +24,7 @@ scene_path = "res://src/s002_keyinput/scene.tscn"
 [node name="Button003" parent="Control" instance=ExtResource( 2 )]
 position = Vector2( 163, 36 )
 label = "3"
-scene_path = "res://s003_move_camera/Scene.tscn"
+scene_path = "res://src/s003_move_camera/scene.tscn"
 
 [node name="Button004" parent="Control" instance=ExtResource( 2 )]
 position = Vector2( 228, 36 )
