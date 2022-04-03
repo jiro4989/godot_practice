@@ -35,4 +35,4 @@ __meta__ = {
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
-[connection signal="add_damage" from="." to="." method="_on_Node2D_add_damage"]
+[connection signal="add_damage" from="Icon" to="." method="add_damage"]

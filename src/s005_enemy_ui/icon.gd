@@ -1,5 +1,6 @@
 extends Sprite
 
+signal add_damage(damage)
 
 func _ready():
 	pass
@@ -13,4 +14,4 @@ func _input(event):
 
 func on_click():
 	#print("Click")
-	emit_signal("add_damage")
+	emit_signal("add_damage", 5)
