@@ -1,7 +1,7 @@
 extends Node2D
 
-onready var counter = 0
-onready var label = $Label
+@onready var counter = 0
+@onready var label = $Label
 
 func _init():
 	pass

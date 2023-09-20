@@ -10,7 +10,7 @@ var texts = [
 ]
 
 # 別ノードを参照するときはonreadyを使う
-onready var text_label = $background/text_area/text
+@onready var text_label = $background/text_area/text
 
 func _ready():
 	pass # Replace with function body.

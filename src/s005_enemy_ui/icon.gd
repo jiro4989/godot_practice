@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 signal add_damage(damage)
 
@@ -8,7 +8,7 @@ func _ready():
 func _input(event):
 	#print("Input")
 	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
+	and event.button_index == MOUSE_BUTTON_LEFT \
 	and event.is_pressed():
 		self.on_click()
 

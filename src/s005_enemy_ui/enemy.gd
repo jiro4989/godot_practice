@@ -1,11 +1,11 @@
 extends Node2D
 
-export (String) var enemy_name
-export (int) var mhp
-onready var hp = 0
+@export var enemy_name: String
+@export var mhp: int
+@onready var hp = 0
 
-onready var name_label = $NameLabel
-onready var hp_label = $HPLabel
+@onready var name_label = $NameLabel
+@onready var hp_label = $HPLabel
 
 func _ready():
 	hp = mhp
