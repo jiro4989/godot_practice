@@ -1,46 +1,52 @@
 [gd_scene load_steps=2 format=3 uid="uid://bt04nllmprarn"]
 
-[ext_resource type="PackedScene" path="res://src/s000_top/button.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bfg065cqi0hbg" path="res://src/s000_top/button2.tscn" id="2_t5pbu"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="base" type="Panel" parent="."]
+offset_right = 868.0
+offset_bottom = 467.0
 
-[node name="Button001" parent="Control" instance=ExtResource("2")]
-position = Vector2(30, 36)
-label = "1"
+[node name="buttons" type="HBoxContainer" parent="base"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.01
+anchor_bottom = 0.01
+
+[node name="btn_1" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 1"
 scene_path = "res://src/s001_counter/scene.tscn"
 
-[node name="Button002" parent="Control" instance=ExtResource("2")]
-position = Vector2(97, 36)
-label = "2"
+[node name="btn_2" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 2"
 scene_path = "res://src/s002_keyinput/scene.tscn"
 
-[node name="Button003" parent="Control" instance=ExtResource("2")]
-position = Vector2(163, 36)
-label = "3"
+[node name="btn_3" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 3"
 scene_path = "res://src/s003_move_camera/scene.tscn"
 
-[node name="Button004" parent="Control" instance=ExtResource("2")]
-position = Vector2(228, 36)
-label = "4"
+[node name="btn_4" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 4"
 scene_path = "res://src/s004_change_ui_text/scene.tscn"
 
-[node name="Button005" parent="Control" instance=ExtResource("2")]
-position = Vector2(294, 37)
-label = "5"
+[node name="btn_5" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 5"
 scene_path = "res://src/s005_enemy_ui/scene.tscn"
 
-[node name="Button006" parent="Control" instance=ExtResource("2")]
-position = Vector2(360, 36)
-label = "6"
+[node name="btn_6" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 6"
 scene_path = "res://src/s006_bgm/scene.tscn"
 
-[node name="Button007" parent="Control" instance=ExtResource("2")]
-position = Vector2(427, 35)
-label = "7"
+[node name="btn_7" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 7"
 scene_path = "res://src/s007_richtext/scene.tscn"
