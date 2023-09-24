@@ -4,11 +4,11 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="base" type="Panel" parent="."]
+[node name="Base" type="Panel" parent="."]
 offset_right = 868.0
 offset_bottom = 467.0
 
-[node name="buttons" type="HBoxContainer" parent="base"]
+[node name="Buttons" type="HBoxContainer" parent="Base"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.01
@@ -16,37 +16,37 @@ anchor_top = 0.01
 anchor_right = 0.01
 anchor_bottom = 0.01
 
-[node name="btn_1" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button1" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 1"
 scene_path = "res://src/s001_counter/scene.tscn"
 
-[node name="btn_2" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button2" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 2"
 scene_path = "res://src/s002_keyinput/scene.tscn"
 
-[node name="btn_3" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button3" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 3"
 scene_path = "res://src/s003_move_camera/scene.tscn"
 
-[node name="btn_4" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button4" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 4"
 scene_path = "res://src/s004_change_ui_text/scene.tscn"
 
-[node name="btn_5" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button5" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 5"
 scene_path = "res://src/s005_enemy_ui/scene.tscn"
 
-[node name="btn_6" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button6" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 6"
 scene_path = "res://src/s006_bgm/scene.tscn"
 
-[node name="btn_7" parent="base/buttons" instance=ExtResource("2_t5pbu")]
+[node name="Button7" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
 layout_mode = 2
 label = "scene 7"
 scene_path = "res://src/s007_richtext/scene.tscn"
