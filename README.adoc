@@ -44,3 +44,4 @@ tscn内のNode名はUpperCamelCase。
 == 参考
 
 * https://www.youtube.com/watch?v=aFkRmtGiZCw[Creating volume sliders in Godot 4 - Youtube], 音量をスライダーで調整
+* https://ask.godotengine.org/31254/how-to-pause-and-resume-a-sound[how to puse and resume a sound? - Godot Engine - Q&A], 音楽を途中から再開
