@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckbmwje4phm53"]
+
+[ext_resource type="AudioStream" uid="uid://d27wa13qrmy6k" path="res://src/s006_bgm/sample.mp3" id="1_mxj7x"]
+[ext_resource type="Script" path="res://src/s006_bgm/StartMusic.gd" id="1_sqqkl"]
+[ext_resource type="Script" path="res://src/s006_bgm/VolumeSlider.gd" id="1_tuhey"]
+[ext_resource type="PackedScene" path="res://src/s000_top/top_button.tscn" id="2_kdnts"]
+[ext_resource type="Script" path="res://src/s006_bgm/Music.gd" id="3_mnual"]
+
+[node name="scene" type="Node2D"]
+
+[node name="StartMusic" type="Button" parent="."]
+offset_left = 55.0
+offset_top = 33.0
+offset_right = 249.0
+offset_bottom = 98.0
+text = "Start Music"
+script = ExtResource("1_sqqkl")
+
+[node name="StopMusic" type="Button" parent="."]
+offset_left = 272.0
+offset_top = 33.0
+offset_right = 466.0
+offset_bottom = 98.0
+text = "Stop Music"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_mxj7x")
+autoplay = true
+bus = &"Music"
+script = ExtResource("3_mnual")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+offset_left = 55.0
+offset_top = 117.0
+offset_right = 466.0
+offset_bottom = 173.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_tuhey")
+bus_name = "Music"
+
+[node name="TopButton" parent="." instance=ExtResource("2_kdnts")]
+position = Vector2(55, 192)
+
+[connection signal="pressed" from="StartMusic" to="Music" method="_on_start_music_pressed"]
+[connection signal="pressed" from="StopMusic" to="Music" method="_on_stop_music_pressed"]

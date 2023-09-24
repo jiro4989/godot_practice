@@ -1,23 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bgydpqn1xjdn7"]
 
-[ext_resource path="res://src/s005_enemy_ui/enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/s000_top/top_button.tscn" type="PackedScene" id=2]
+[ext_resource type="PackedScene" uid="uid://xq0k0rl6ln31" path="res://src/s005_enemy_ui/enemy.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://src/s000_top/top_button.tscn" id="2"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Enemy1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 56, 61 )
+[node name="Enemy1" parent="." instance=ExtResource("1")]
+position = Vector2(56, 61)
 enemy_name = "Enemy1"
 
-[node name="Enemy2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 139, 61 )
+[node name="Enemy2" parent="." instance=ExtResource("1")]
+position = Vector2(139, 61)
 enemy_name = "Enemy2"
 mhp = 200
 
-[node name="Enemy3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 229, 61 )
+[node name="Enemy3" parent="." instance=ExtResource("1")]
+position = Vector2(229, 61)
 enemy_name = "Enemy3"
 mhp = 300
 
-[node name="TopButton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 31, 192 )
+[node name="TopButton" parent="." instance=ExtResource("2")]
+position = Vector2(31, 192)

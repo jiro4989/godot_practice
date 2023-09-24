@@ -15,8 +15,8 @@ func _ready():
 func _process(delta):
 	hp_label.text = str(hp) + " / " + str(mhp)
 
-func add_damage(damage):
-	print("damage")
+func add_damage(damage: int):
+	print("damage", self)
 	var point = hp - damage
 	if point < 0:
 		point = 0
