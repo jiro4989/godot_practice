@@ -33,6 +33,7 @@ Top.tscnがすべての起点になるシーンで、そこから個別のシー
 | src/s004_change_ui_text | ボタンを押すとUI上のテキストを次に進める
 | src/s005_enemy_ui | 敵に名前と体力を設定して、敵ごとに個別の体力を持たせる
 | src/s006_bgm | 音楽を鳴らす、音量調整をする
+| src/s007_richtext | RichTextLabel(装飾できるテキスト)を使う。あとUIの装飾を多少
 |===========
 
 == 命名規則
@@ -45,3 +46,5 @@ tscn内のNode名はUpperCamelCase。
 
 * https://www.youtube.com/watch?v=aFkRmtGiZCw[Creating volume sliders in Godot 4 - Youtube], 音量をスライダーで調整
 * https://ask.godotengine.org/31254/how-to-pause-and-resume-a-sound[how to puse and resume a sound? - Godot Engine - Q&A], 音楽を途中から再開
+* https://www.youtube.com/watch?v=RHcHMRUGDHU[Godot UI QUICKSTART (Ex-Unity friendly guide) - Youtube], UI関係
+* https://2dgames.jp/godot-richtextlabel-bb-code/[【Godot】RichTextLabelのBB Codeの使い方 - 1dgames.jp], テキストの装飾
