@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://canxeirlwrecj"]
+
+[ext_resource type="PackedScene" path="res://src/s000_top/top_button.tscn" id="1_2cn6r"]
+[ext_resource type="Script" path="res://src/s008_wrap_text/scene.gd" id="1_t8xvv"]
+
+[node name="Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t8xvv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 432.0
+offset_bottom = 279.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Text" type="RichTextLabel" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="TopButton" parent="." instance=ExtResource("1_2cn6r")]
+position = Vector2(43, 373)
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 45.0
+offset_right = 623.0
+offset_bottom = 121.0
+text = "次へ"
+
+[node name="InitText" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 150.0
+offset_right = 626.0
+offset_bottom = 209.0
+text = "テキストを元に戻す"
+
+[node name="Duration0_05" type="Button" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 254.0
+offset_right = 624.0
+offset_bottom = 329.0
+text = "Duration 0.05"
+
+[node name="Duration0_25" type="Button" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 254.0
+offset_right = 784.0
+offset_bottom = 329.0
+text = "Duration 0.25"
+
+[node name="Duration0_50" type="Button" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 341.0
+offset_right = 622.0
+offset_bottom = 416.0
+text = "Duration 0.50"
+
+[node name="Duration0_01" type="Button" parent="."]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 339.0
+offset_right = 785.0
+offset_bottom = 414.0
+text = "Duration 0.01"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="InitText" to="." method="_on_init_text_pressed"]
+[connection signal="pressed" from="Duration0_05" to="." method="_on_duration_0_05_pressed"]
+[connection signal="pressed" from="Duration0_25" to="." method="_on_duration_0_25_pressed"]
+[connection signal="pressed" from="Duration0_50" to="." method="_on_duration_0_50_pressed"]
+[connection signal="pressed" from="Duration0_01" to="." method="_on_duration_0_01_pressed"]

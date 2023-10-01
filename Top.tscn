@@ -50,3 +50,8 @@ scene_path = "res://src/s006_bgm/scene.tscn"
 layout_mode = 2
 label = "scene 7"
 scene_path = "res://src/s007_richtext/scene.tscn"
+
+[node name="Button8" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 8"
+scene_path = "res://src/s008_wrap_text/scene.tscn"
