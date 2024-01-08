@@ -31,6 +31,7 @@ classDiagram
     class Conversations {
         -ConversationBlock conversationBlock
         -DisplayConversation displayConversation
+        -Backlog backlog
         +loadConversationBlock(String id)
         +nextConversation()
     }
@@ -54,6 +55,7 @@ classDiagram
 
     Conversations ..o ConversationBlock
     Conversations ..o DisplayConversation
+    Conversations ..o Backlog
     ConversationBlock ..o ConversationText
     ConversationText ..o Choice
     DisplayConversation ..o ConversationText
