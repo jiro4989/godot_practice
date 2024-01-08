@@ -15,3 +15,6 @@ func _process(delta):
 
 func _on_pressed():
 	get_tree().change_scene_to_file(scene_path)
+
+func _on_button_exit_pressed():
+	get_tree().quit()

@@ -55,3 +55,9 @@ scene_path = "res://src/s007_richtext/scene.tscn"
 layout_mode = 2
 label = "scene 8"
 scene_path = "res://src/s008_wrap_text/scene.tscn"
+
+[node name="ButtonExit" type="Button" parent="Base/Buttons"]
+layout_mode = 2
+text = "EXIT"
+
+[connection signal="pressed" from="Base/Buttons/ButtonExit" to="Base/Buttons/Button1" method="_on_button_exit_pressed"]
