@@ -56,6 +56,11 @@ layout_mode = 2
 label = "scene 8"
 scene_path = "res://src/s008_wrap_text/scene.tscn"
 
+[node name="Button9" parent="Base/Buttons" instance=ExtResource("2_t5pbu")]
+layout_mode = 2
+label = "scene 9"
+scene_path = "res://src/s009_backlog/scene.tscn"
+
 [node name="ButtonExit" type="Button" parent="Base/Buttons"]
 layout_mode = 2
 text = "EXIT"

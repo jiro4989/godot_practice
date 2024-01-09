@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://qxxi7hyq8nhp"]
+
+[ext_resource type="Script" path="res://src/s009_backlog/log.gd" id="1_owuid"]
+
+[node name="log" type="PanelContainer"]
+custom_minimum_size = Vector2(900, 220)
+offset_right = 900.0
+offset_bottom = 220.0
+script = ExtResource("1_owuid")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.556863, 0.556863, 0.556863, 1)
+
+[node name="Control" type="Control" parent="ColorRect"]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 210.0
+
+[node name="FaceImage" type="Sprite2D" parent="ColorRect/Control"]
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 890.0
+offset_bottom = 210.0
+
+[node name="Name" type="RichTextLabel" parent="ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Conversation" type="RichTextLabel" parent="ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 165)
+layout_mode = 2

@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://couwstnpnkdrr"]
+
+[ext_resource type="Script" path="res://src/s009_backlog/scene.gd" id="1_38nvi"]
+[ext_resource type="Texture2D" uid="uid://cig0nxwa8b4bl" path="res://src/s009_backlog/bg1920x1080.png" id="1_webhj"]
+[ext_resource type="PackedScene" path="res://src/s000_top/top_button.tscn" id="2_8k5wq"]
+
+[node name="scene" type="Node2D"]
+script = ExtResource("1_38nvi")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_webhj")
+centered = false
+
+[node name="TopButton" parent="." instance=ExtResource("2_8k5wq")]
+position = Vector2(114, 694)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="TopArea" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 100.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="MessageArea" type="ColorRect" parent="CanvasLayer"]
+offset_top = 780.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MessageArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MessageArea/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MessageArea/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ActorName" type="RichTextLabel" parent="CanvasLayer/MessageArea/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(700, 40)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 28
+text = "名前"
+
+[node name="Conversation" type="RichTextLabel" parent="CanvasLayer/MessageArea/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 26
+text = "Sample code is here."
+
+[node name="BacklogArea" type="ColorRect" parent="."]
+offset_left = 653.0
+offset_top = 146.0
+offset_right = 1872.0
+offset_bottom = 738.0
+color = Color(0.266667, 0.266667, 0.266667, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BacklogArea"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1190.0
+offset_bottom = 554.0
+
+[node name="BacklogContainer" type="VBoxContainer" parent="BacklogArea/ScrollContainer"]
+layout_mode = 2
+
+[node name="BacklogButton" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 128.0
+offset_right = 292.0
+offset_bottom = 284.0
+text = "Backlogに追加"
+
+[connection signal="pressed" from="BacklogButton" to="." method="_on_backlog_button_pressed"]
