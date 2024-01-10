@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw7ajplg45dc3"]
+
+[ext_resource type="PackedScene" path="res://src/s000_top/top_button.tscn" id="1_ajru0"]
+[ext_resource type="Script" path="res://src/s010_screen_width/scene.gd" id="1_uohsd"]
+
+[node name="scene" type="Node2D"]
+script = ExtResource("1_uohsd")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 800.0
+offset_bottom = 400.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="WindowSize" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1366x768"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="ScreenType" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "フルスクリーン"
+popup/item_0/id = 0
+popup/item_1/text = "ウィンドウ"
+popup/item_1/id = 1
+popup/item_2/text = "ボーダーレス"
+popup/item_2/id = 2
+
+[node name="TopButton" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("1_ajru0")]
+position = Vector2(-152, 88)
+
+[connection signal="item_selected" from="PanelContainer/MarginContainer/VBoxContainer/WindowSize" to="." method="_on_window_size_item_selected"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/VBoxContainer/ScreenType" to="." method="_on_screen_type_item_selected"]
