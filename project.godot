@@ -12,7 +12,7 @@ config_version=5
 
 config/name="godot_practice"
 run/main_scene="res://Top.tscn"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [display]
@@ -21,6 +21,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [physics]
 

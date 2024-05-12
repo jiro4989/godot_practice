@@ -36,7 +36,7 @@ Top.tscnがすべての起点になるシーンで、そこから個別のシー
 | src/s007_richtext | RichTextLabel(装飾できるテキスト)を使う。あとUIの装飾を多少
 | src/s008_wrap_text | １文字ずつテキストを描画。描画速度の変更
 | src/s009_backlog | スクロールできるバックログ
-| src/s010_screen_width | (TODO) フルスクリーン、画面幅の変更
+| src/s010_screen_width | フルスクリーン、画面幅の変更
 | src/s011_save_load | (TODO) セーブデータの管理
 |===========
 

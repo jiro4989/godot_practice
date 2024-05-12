@@ -28,11 +28,6 @@ func window_centoring_position(window_size: Vector2i, screen_size: Vector2i) -> 
 	var y2 = y / 2
 	return Vector2i(screen_size.x / 2 - x2, screen_size.y / 2 - y2)
 
-func set_window_centoring_position(window: Window):
-	if window.mode == Window.MODE_FULLSCREEN:
-		return
-	window.position = window_centoring_position(window.size, DisplayServer.screen_get_size())
-
 func _on_window_size_item_selected(index):
 	var selected_item = window_size_button.get_item_text(index)
 	var size = selected_item.split("x")
